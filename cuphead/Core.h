@@ -1,10 +1,6 @@
 #ifndef __Core
 #define __Core
 
-#include <Windows.h>
-
-#include "Singleton.h"
-
 class Core
 {
 	SINGLETON( Core );
