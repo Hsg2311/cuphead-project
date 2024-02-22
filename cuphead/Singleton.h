@@ -2,10 +2,10 @@
 #define __Singleton
 
 #define SINGLETON(type) public:\
-							static type* GetInst( )\
+							static type& GetInst( )\
 							{\
 								static type mgr;\
-								return &mgr;\
+								return mgr;\
 							}\
 						private:\
 							type( );\

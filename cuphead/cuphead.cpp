@@ -48,7 +48,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 
 
-    if ( FAILED( Core::GetInst( )->init( g_hWnd, POINT{ 1280, 768 } ) ) )
+    if ( FAILED( Core::GetInst( ).init( g_hWnd, POINT{ 1280, 768 } ) ) )
     {
         MessageBox( nullptr, L"Core 객체 초기화 실패", L"Error", MB_OK );
 
@@ -77,7 +77,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
         else
         {
-            Core::GetInst( )->progress( );
+            Core::GetInst( ).progress( );
         }
     }
 
