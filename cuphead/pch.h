@@ -4,6 +4,7 @@
 #include <Windows.h>
 
 #include <crtdbg.h>
+#include <optional>
 
 #include "Singleton.h"
 
