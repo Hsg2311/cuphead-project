@@ -22,6 +22,12 @@
     <Filter Include="Engine\02. Core">
       <UniqueIdentifier>{8fdd3377-9079-46ea-b9c4-8f1a7ef6c0ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager">
+      <UniqueIdentifier>{8452cd7a-cade-47de-9e5e-b122b32eaab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\GDI+Manager">
+      <UniqueIdentifier>{17bcfdf3-fb44-40c9-bba7-4baac3c21af6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -45,6 +51,9 @@
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="GdiplusMgr.h">
+      <Filter>Engine\03. Manager\GDI+Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cuphead.cpp">
@@ -52,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="Core.cpp">
       <Filter>Engine\02. Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GdiplusMgr.cpp">
+      <Filter>Engine\03. Manager\GDI+Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
