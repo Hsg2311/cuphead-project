@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Core.h"
+#include "GdiplusMgr.h"
 
 Core::Core( )
 	: hWnd_{ nullptr }
@@ -8,7 +9,7 @@ Core::Core( )
 	, hBit_{ nullptr }
 	, memDC_{ nullptr }
 {
-
+	GdiplusMgr::GetInst( );
 }
 
 Core::~Core( )
