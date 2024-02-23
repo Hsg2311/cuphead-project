@@ -6,6 +6,7 @@
 #include "cuphead.h"
 
 #include "Core.h"
+#include "GdiplusMgr.h"
 
 #define MAX_LOADSTRING 100
 
@@ -48,11 +49,24 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 
 
-    if ( FAILED( Core::GetInst( ).init( g_hWnd, POINT{ 1280, 768 } ) ) )
+    try
     {
-        MessageBox( nullptr, L"Core 객체 초기화 실패", L"Error", MB_OK );
+        if ( FAILED( Core::GetInst( ).init( g_hWnd, POINT{ 1280, 768 } ) ) )
+        {
+            MessageBox( nullptr, L"Core 객체 초기화 실패", L"Error", MB_OK );
+
+            return FALSE;
+        }
+    }
+    catch ( const GdiplusMgr::InitFailed& e )
+    {
+        MessageBoxA( nullptr, e.what( ), "Error", MB_OK );
 
         return FALSE;
+    }
+    catch ( const std::exception& e )
+    {
+        std::cout << e.what( ) << '\n';
     }
 
 
